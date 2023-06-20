@@ -28,10 +28,29 @@ public class EntityManager {
 
     @Test
     public void 영속성_테스트_코드() {
+
         Order order = new Order();
+
+        /**     테스트용
+        order.setOrderDate("20230618");
+        order.setOrderTime("00000000");
+        order.setTotalPrice(10);
+
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        try {
+            entityManager.persist(order);
+            entityTransaction.commit();
+        } catch (Exception e) {
+            entityTransaction.rollback();
+            e.printStackTrace();
+        }
+        **/
+
 
         //새로운 order 엔티티를 영속 상태로 만든다.
         entityManager.persist(order);
+        //entityManager.flush();
 
         //저장했던 order 엔티티를 영속성 컨텍스트에서 분리하여 준영속 상태로 만든다.
         entityManager.detach(order);
