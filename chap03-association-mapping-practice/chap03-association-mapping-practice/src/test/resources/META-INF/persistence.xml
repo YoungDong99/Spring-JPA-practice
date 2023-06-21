@@ -3,17 +3,22 @@
     <!-- 엔티티 매니저 팩토리를 식별하기 위한 이름 설정 -->
     <persistence-unit name="jpatest">
 
-
+        <class>com.example.section01.manytoone.Board</class>
+        <class>com.example.section01.manytoone.User</class>
+        <class>com.example.section02.onetomany.Board</class>
+        <class>com.example.section02.onetomany.User</class>
 
         <properties>
             <!-- 데이터 베이스 연결 정보 -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sahmyook"/>
             <property name="javax.persistence.jdbc.password" value="sahmyook"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/menu"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/professordb"/>
             <!-- hibernate 설정 (실행 되는 sql 구문을 format 형태로 보여준다) -->
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
+
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
 
         </properties>
 

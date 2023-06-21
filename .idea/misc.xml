@@ -6,7 +6,7 @@
     <file type="web" url="file://$PROJECT_DIR$/chap02-mapping-practice/chap02-mapping-practice" />
     <file type="web" url="file://$PROJECT_DIR$/chap03-association-mapping-practice/chap03-association-mapping-practice" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
