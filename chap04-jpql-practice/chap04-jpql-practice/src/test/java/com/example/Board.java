@@ -5,6 +5,7 @@ import java.util.Date;
 
 @Entity(name="board_jpql")
 @Table(name="tbl_board")
+@NamedQuery(name = "Board.findAll", query = "SELECT b FROM board_jpql b")
 public class Board {
     @Id
     @Column(name="board_id")
