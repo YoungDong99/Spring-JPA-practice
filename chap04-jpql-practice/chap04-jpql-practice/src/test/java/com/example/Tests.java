@@ -74,5 +74,19 @@ public class Tests {
         boardList.forEach(System.out::println);
     }
 
+    @Test
+    public void BoardInfo_프로젝션_테스트() {
+
+        //when
+        String jpql = "SELECT new com.example.BoardInfo " +
+                "(b.boardId,b.title,b.content) FROM board_jpql b";
+        List<BoardInfo> boardInfoList = entityManager.createQuery(jpql, BoardInfo.class).getResultList();
+
+        //then
+        assertNotNull(boardInfoList);
+        boardInfoList.forEach(System.out::println);
+    }
+
+
 
 }
